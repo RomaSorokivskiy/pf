@@ -18,15 +18,14 @@ const Bubbles = () => {
     // @ts-ignore
     useFrame((state, delta) => void (ref.current.rotation.y = MathUtils.damp(ref.current.rotation.y, (-state.mouse.x * Math.PI) / 6, 2.75, delta)))
     // @ts-ignore
-    return (
-        <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 10, 0]}>
-            <sphereGeometry args={[1, 32, 32]} />
-            <meshStandardMaterial roughness={0} color="#333333" />
-            {particles.map((data, i) => (
-                <Bubble key={i} {...data} />
-            ))}
-        </Instances>
-    )
+    let instances = <><Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 10, 0]}>
+        <sphereGeometry args={[1, 32, 32]}/>
+        <meshStandardMaterial roughness={0} color="#333333"/>
+        {particles.map((data, i) => (
+            <Bubble key={i} {...data} />
+        ))}
+    </Instances></>;
+    return instances
 }
 // @ts-ignore
 const  Bubble = ({ factor, speed, xFactor, yFactor, zFactor }) => {
