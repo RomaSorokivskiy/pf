@@ -55,7 +55,7 @@ const BgFooter = () => {
             <Bubbles />
             <ContactShadows position={[0, -30, 0]} opacity={0.6} scale={60} blur={1} far={10} />
             <EffectComposer multisampling={0}>
-                <SSAO samples={31} radius={0.1} intensity={20} luminanceInfluence={0.1} color="blue" />
+                <SSAO samples={31} radius={0.1} intensity={20} luminanceInfluence={0.1} />
             </EffectComposer>
             <Suspense fallback={null}>
                 <Environment preset="city" />
