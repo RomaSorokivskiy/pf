@@ -44,6 +44,7 @@ const  Bubble = ({ factor, speed, xFactor, yFactor, zFactor }) => {
     return <Instance ref={ref} />
 }
 const BgFooter = () => {
+    // @ts-ignore
     return (
         <Canvas shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ fov: 50, position: [0, 0, 60], near: 10, far: 150 }} style={{position:"absolute",left:0,top:"90%",zIndex:-1}}>
             {/*<color attach="background" args={['#333333']} />*/}
@@ -54,9 +55,9 @@ const BgFooter = () => {
             <pointLight position={[100, 100, 100]} intensity={0.5} color="red" />
             <Bubbles />
             <ContactShadows position={[0, -30, 0]} opacity={0.6} scale={60} blur={1} far={10} />
-            <EffectComposer multisampling={0}>
-                <SSAO samples={31} radius={0.1} intensity={20} luminanceInfluence={0.1} />
-            </EffectComposer>
+            {/*<EffectComposer multisampling={0}>*/}
+            {/*    <SSAO samples={31} radius={0.1} intensity={20} luminanceInfluence={0.1} />*/}
+            {/*</EffectComposer>*/}
             <Suspense fallback={null}>
                 <Environment preset="city" />
             </Suspense>
