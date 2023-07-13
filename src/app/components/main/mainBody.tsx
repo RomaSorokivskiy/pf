@@ -53,7 +53,7 @@ const MainBody = () => {
     return(
         <div className="main_body">
             <div className="container">
-                <h2>Welcome to SorokSkull's Universe</h2>
+                <h2>Welcome to SorokSkull Site</h2>
                 <p>Embark on a fascinating expedition through SorokSkull’s enthralling world of coding marvels, creative adventures, and witty insights into the realm of full-stack development. Stay tuned for delightful surprises!</p>
                 <div className="main_body__nav">
                     {arr.map((el:any,id:number) => <NavButton props={el} key={id++}/>)}
