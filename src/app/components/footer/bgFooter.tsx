@@ -46,7 +46,7 @@ const  Bubble = ({ factor, speed, xFactor, yFactor, zFactor }) => {
 const BgFooter = () => {
     // @ts-ignore
     return (
-        <Canvas shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ fov: 50, position: [0, 0, 60], near: 10, far: 150 }} style={{position:"absolute",left:0,top:"90%",zIndex:-1}}>
+        <Canvas shadows dpr={[1, 2]} gl={{ antialias: true }} camera={{ fov: 50, position: [0, 0, 60], near: 10, far: 150 }} style={{position:"absolute",left:0,top:0,zIndex:-1}}>
             {/*<color attach="background" args={['#333333']} />*/}
             {/*<fog attach="fog" args={['white', 60, 110]} />*/}
             <ambientLight intensity={1} />

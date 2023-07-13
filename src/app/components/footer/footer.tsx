@@ -9,7 +9,7 @@ import {Suspense} from "react";
 import BgFooter from "@/app/components/footer/bgFooter";
 const Footer = () => {
     return(
-        <footer>
+        <footer style={{position:"relative"}}>
             <div className="container">
                 <h3>Stay Connected</h3>
                 <p>Join the ranks of SorokSkull’s noble followers, and never miss out on a grand update from the mystical coding realm.</p>
